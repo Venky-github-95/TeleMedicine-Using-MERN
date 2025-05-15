@@ -1,0 +1,992 @@
+/* Apply a light, clean hospital color palette */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #f0f4f8, #85b6e7);
+  margin: 0;
+  padding: 0;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Home page with background and navbar */
+/* .home-container {
+  background: url('https://www.drmaidhospital.in/wp-content/uploads/2022/02/man-at-doctor-stock-today-150608.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+} */
+
+
+
+/* Login and Registration Form Styling */
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+h2 {
+  text-align: center;
+  color: #0077b6;
+  margin-bottom: 24px;
+  font-size: 28px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border-color: #0077b6;
+  outline: none;
+}
+
+button {
+  padding: 12px;
+  margin-top: 16px;
+  background-color: #0077b6;
+  border: none;
+  color: white;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #005f86;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.error-message {
+  color: #d9534f;
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.success-message {
+  color: #28a745;
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.link a {
+  color: #0077b6;
+  text-decoration: none;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+/* Admin Login Styles */
+.admin-toggle-btn {
+  padding: 0.5rem 1rem;
+  background-color: #f7fafc;
+  color: #2d3748;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.admin-toggle-btn:hover {
+  background-color: #edf2f7;
+}
+
+.admin-toggle-btn.active {
+  background-color: #4299e1;
+  color: white;
+  border-color: #4299e1;
+}
+
+.calculation-verification {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.calculation-verification label {
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+
+
+
+
+/* Dashboard styles */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.dashboard-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0077b6;
+  padding: 10px 30px;
+  color: white;
+}
+
+.dashboard-navbar button {
+  background-color: #fff;
+  color: #0077b6;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dashboard-navbar button:hover {
+  background-color: #e0e0e0;
+}
+
+.dashboard-main {
+  display: flex;
+  flex: 1;
+}
+
+.dashboard-sidebar {
+  width: 220px;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.dashboard-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dashboard-sidebar li {
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  transition: color 0.3s;
+  /* background-color: #04c37d; */
+  background-color: transparent;
+  border-bottom: 3px solid #04c37d;
+  border-right: 3px solid #04c37d;
+  color: black;
+  padding: 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+  display: flex;
+}
+
+.dashboard-sidebar li a {
+  text-decoration: none; /* Removes the underscored style */
+  color: inherit; /* Ensures the link inherits the color from the parent */
+}
+
+.dashboard-sidebar li Link{
+  text-decoration: none;
+  color: inherit;
+}
+
+.dashboard-sidebar li:hover {
+  color: #ffffff;
+  background-color: #04c37d;
+  transform: scale(1.05); 
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 40px;
+  background-color: #fafafa;
+}
+
+.dashboard-content h2 {
+  margin-bottom: 20px;
+}
+
+.dashboard-content p {
+  font-size: 16px;
+  color: #555;
+}
+/* Dashboard Overview Styles */
+.dashboard-overview {
+  padding: 2rem;
+}
+
+.dashboard-overview h2 {
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.dashboard-card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.75rem;
+}
+
+.card-header h3 {
+  font-size: 1.1rem;
+  color: #2d3748;
+}
+
+.view-all {
+  font-size: 0.85rem;
+  color: #4299e1;
+  text-decoration: none;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+/* Appointments List */
+.appointment-list {
+  list-style: none;
+}
+
+.appointment-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.appointment-item:last-child {
+  border-bottom: none;
+}
+
+.appointment-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.doctor-name {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.appointment-time {
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.appointment-specialty {
+  font-size: 0.8rem;
+  color: #4a5568;
+  background: #ebf8ff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  align-self: flex-start;
+}
+
+.action-button {
+  background: #4299e1;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.action-button:hover {
+  background: #3182ce;
+}
+
+/* Prescriptions List */
+.prescription-list {
+  list-style: none;
+}
+
+.prescription-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.prescription-item:last-child {
+  border-bottom: none;
+}
+
+.prescription-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.prescription-date {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.prescription-doctor {
+  font-size: 0.85rem;
+  color: #718096;
+}
+
+.medication-list {
+  list-style: none;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #4a5568;
+}
+
+.medication-list li {
+  padding: 0.2rem 0;
+}
+
+/* Profile Details */
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: #4a5568;
+}
+
+/* Messages List */
+.message-list {
+  list-style: none;
+}
+
+.message-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #edf2f7;
+  cursor: pointer;
+}
+
+.message-item.unread {
+  background-color: #f0f9ff;
+  margin: 0 -1.5rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.message-item:last-child {
+  border-bottom: none;
+}
+
+.message-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.message-from {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.message-time {
+  font-size: 0.75rem;
+  color: #718096;
+}
+
+.message-text {
+  font-size: 0.85rem;
+  color: #4a5568;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* No Data State */
+.no-data {
+  color: #a0aec0;
+  font-style: italic;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard-overview {
+    padding: 1rem;
+  }
+}
+
+
+
+/* Modern Appointment Form Styling */
+.form-container-appointment {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.form-container-appointment h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1a365d;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Form Grid Layout */
+.form-container-appointment form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+/* Form Group Styling */
+.form-container-appointment .form-group {
+  margin-bottom: 1rem;
+}
+
+.form-container-appointment label {
+  display: block;
+  font-weight: 500;
+  color: #2d3748;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Input Field Styling */
+.form-container-appointment input{
+  width: 80%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.form-container-appointment select {
+  width: 90%;
+  padding: 0.8rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background-color: #f8fafc;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  margin-top: 0.7rem;
+}
+
+.form-container-appointment input:focus,
+.form-container-appointment select:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+  background-color: #ffffff;
+}
+
+/* Full Width Fields */
+.form-container-appointment .full-width {
+  grid-column: span 2;
+}
+
+/* Date Input Customization */
+.form-container-appointment input[type="date"] {
+  position: relative;
+}
+
+.form-container-appointment input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 0;
+  padding: 0.8rem;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+/* Select Dropdown Styling */
+.form-container-appointment select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-container-appointment {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .form-container-appointment form {
+    grid-template-columns: 1fr;
+  }
+  
+  .form-container-appointment .full-width {
+    grid-column: span 1;
+  }
+}
+
+/* Placeholder Styling */
+.form-container-appointment ::placeholder {
+  color: #a0aec0;
+  opacity: 1;
+}
+
+
+/* Loading Spinner for Button */
+.submit-btn .spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+  margin-right: 0.5rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Disabled State Styling */
+select:disabled {
+  opacity: 0.7;
+  background-color: #edf2f7;
+  cursor: not-allowed;
+}
+
+.submit-btn:disabled {
+  background: #a0aec0;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Textarea Styling */
+textarea {
+  min-height: 100px;
+  resize: vertical;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 400px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.pdf-preview {
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.download-button,
+.close-button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.download-button {
+  background: #4CAF50;
+  color: white;
+}
+
+.close-button {
+  background: #ccc;
+}
+
+
+
+/* Messaging style */
+
+.chat-container { border: 1px solid #ccc; border-radius: 10px; padding: 10px; max-width: 600px; margin: auto; }
+.chat-header { display: flex; justify-content: space-between; align-items: center; }
+.chat-box { height: 300px; overflow-y: scroll; margin: 10px 0; padding: 10px; background: #f9f9f9; }
+.chat-message { margin-bottom: 10px; padding: 8px 12px; border-radius: 15px; max-width: 70%; }
+.chat-message.sent { background-color: #DCF8C6; align-self: flex-end; }
+.chat-message.received { background-color: #FFF; align-self: flex-start; }
+.chat-input { display: flex; gap: 10px; }
+.chat-input input { flex: 1; padding: 8px; }
+.pagination { display: flex; justify-content: center; gap: 10px; margin-top: 10px; }
+
+
+/* Chat Messaging page style */
+
+.general-chats-container {
+    display: flex;
+    gap: 20px;
+    height: 75vh;
+    padding: 20px;
+    width: 90%;
+    background-color: #fafafa; /* Subtle background for the container */
+    border-radius: 10px; /* Slightly round edges for the container */
+}
+
+.users-list {
+    flex: 1;
+    max-width: 400px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Slightly more prominent shadow */
+    overflow-y: scroll;
+    transition: transform 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+.user-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px; /* Added padding for better clickability */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    border-radius: 8px;
+}
+
+.user-card:hover {
+    background-color: #04c37d;
+    transform: translateY(-6px); /* Enhanced hover effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+.user-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 5px solid #04c37d;
+    object-fit: cover; /* Ensures image doesn't stretch */
+}
+
+.chat-screen {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* More prominent shadow */
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.chat-user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.call-icon {
+    color: #007bff;
+    cursor: pointer;
+    font-size: 20px; /* Slightly larger call icon */
+}
+
+.chat-messages {
+    flex: 1;
+    margin-top: 20px;
+    overflow-y: auto;
+    padding-right: 12px;
+    padding-bottom: 20px;
+}
+
+.message {
+    margin-bottom: 12px;
+    padding: 12px; /* Added padding for more spacious messages */
+    border-radius: 10px; /* Slightly rounded message boxes */
+}
+
+.message.sent {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+}
+
+.message.received {
+    background-color: #f1f1f1;
+    color: black;
+    align-self: flex-start;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.chat-input input:focus {
+    border-color: #04c37d;
+}
+
+.chat-input button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chat-input button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+@media screen and (max-width: 768px) {
+    .general-chats-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .users-list {
+        max-width: 100%;
+        max-height: 500px;
+    }
+
+    .chat-screen {
+        width: 100%;
+        max-height: 400px;
+    }
+}
+
+
+
+/* src/pages/UserPrescriptions.css */
+.user-prescription-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.user-prescription-container .title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 1rem;
+  color: #333;
+}
+
+.user-prescription-container .grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+
+.user-prescription-container .card {
+  background: #fff;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  border: 1px solid #ddd;
+  width: 100%;
+}
+
+.user-prescription-container .card-header {
+  background-color: #2563eb;
+  color: white;
+  padding: 1rem;
+  position: relative;
+}
+
+.user-prescription-container .card-header .id-tag {
+  background: white;
+  color: #2563eb;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.user-prescription-container .info, .medicines, .extras {
+  padding: 1rem;
+}
+
+.user-prescription-container .info-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.user-prescription-container .icon {
+  color: #2563eb;
+  margin-right: 0.5rem;
+}
+
+.user-prescription-container .section-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.user-prescription-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-prescription-container th, td {
+  text-align: left;
+  padding: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.user-prescription-container .test-section, .note-section {
+  margin-bottom: 1rem;
+}
+
+.user-prescription-container .footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.user-prescription-container .buttons button {
+  margin-left: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.user-prescription-container .buttons button:first-child {
+  background-color: #ef4444;
+}
+
+.user-prescription-container .loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.user-prescription-container .spinner {
+  border: 4px solid #eee;
+  border-top: 4px solid #2563eb;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.no-data {
+  text-align: center;
+  padding: 4rem;
+  color: #666;
+}
+
+.no-data-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
