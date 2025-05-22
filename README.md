@@ -9,6 +9,19 @@ The Telemedicine Application is a digital healthcare platform designed to revolu
 
 Setup the project :
 
-Download the ZIP file
+1. Download the ZIP file
+
+2. Install the dependencies
+
+3. backend --> npm install
+
+4. hospital-frontend --> npm install
+
+5. Create a database (Hospital) in MongoDBCompass
+
+6. Insert the JSON data in the Hospital database
+
+7. 
+
 
 
